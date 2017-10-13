@@ -1,6 +1,5 @@
-# Library Symbol Replacer
 <img src='./cover.png'>
-
+## Overview
 Replace symbols in the current document with symbols from a Library.
 
 Sketch 47 sees the introduction of Libraries, but migrating existing files to use Library symbols is one of the first big headaches. This plugin aims to help with that.
