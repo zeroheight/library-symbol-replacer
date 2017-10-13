@@ -1,4 +1,4 @@
-<img src='./cover.png'>
+<img src='./images/cover.png'>
 
 ## Overview
 Replace symbols in the current document with symbols from a Library.
