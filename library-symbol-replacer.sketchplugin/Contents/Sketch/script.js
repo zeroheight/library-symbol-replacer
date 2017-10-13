@@ -22,20 +22,19 @@ var replaceSymbols = function(context) {
   var mySymbols = documentData.localSymbols();
   var localLookup = {};
   for(var i = 0 ; i < mySymbols.length ; ++i){
-    var symbolID = String(mySymbols[i].symbolID());
-    localLookup[symbolID] = mySymbols[i];
+    var symbolName = String(mySymbols[i].name());
+    localLookup[symbolName] = mySymbols[i];
   }
 
   var imports = [];
   var totalInstances = 0;
 
   // find any local symbols in the current document which are now provided by the library
-
   var librarySymbols = library.document().documentData().localSymbols();
   for(var i = 0 ; i < librarySymbols.length ; ++i){
     var librarySymbol = librarySymbols[i];
-    var symbolID = String(librarySymbol.symbolID());
-    var localSymbol = localLookup[symbolID];
+    var symbolName = String(librarySymbol.name());
+    var localSymbol = localLookup[symbolName];
     if(localSymbol){
       var instances = localSymbol.allInstances();
       if(instances.length > 0){
