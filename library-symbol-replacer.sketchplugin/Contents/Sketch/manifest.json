@@ -1,7 +1,7 @@
 {
     "name" : "Library Symbol Replacer",
     "identifier" : "com.zeroheight.library-symbol-replacer",
-    "version" : "1.0.1",
+    "version" : "1.0.2",
     "description" : "replace local symbols with library symbols",
     "authorEmail" : "support@zeroheight.com",
     "author" : "zeroheight team",

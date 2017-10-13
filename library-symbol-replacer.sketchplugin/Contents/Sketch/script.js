@@ -92,14 +92,14 @@ var replaceSymbols = function(context) {
 
 var showAlert = function(message){
    var app = NSApplication.sharedApplication();
-   app.displayDialog_withTitle(message, 'Library Replace Plugin');
+   app.displayDialog_withTitle(message, 'Library Symbol Replacer');
 }
 
 var yesNoDialog = function(message,first,second){
   var alert = [[NSAlert alloc] init];
   [alert addButtonWithTitle:first];
   [alert addButtonWithTitle:second];
-  [alert setMessageText:'Library Replace Plugin'];
+  [alert setMessageText:'Library Symbol Replacer'];
   [alert setInformativeText:message];
   [alert setAlertStyle:NSWarningAlertStyle];
   return ([alert runModal] == NSAlertFirstButtonReturn);
