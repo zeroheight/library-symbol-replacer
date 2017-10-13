@@ -1,12 +1,15 @@
 {
     "name" : "Library Symbol Replacer",
     "identifier" : "com.zeroheight.library-symbol-replacer",
-    "version" : "1.0",
+    "version" : "1.0.1",
     "description" : "replace local symbols with library symbols",
     "authorEmail" : "support@zeroheight.com",
-    "author" : "The zeroheight team",
+    "author" : "zeroheight team",
     "appcast" : "https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/appcast",    
-	
+	  "updateURL": "https://github.com/zeroheight/library-symbol-replacer",
+    "compatibleVersion": 1,
+    "bundleVersion": 1,
+
     "commands" : [
     {
       "script" : "script.js",

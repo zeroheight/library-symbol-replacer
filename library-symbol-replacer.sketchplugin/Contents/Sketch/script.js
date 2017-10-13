@@ -30,7 +30,7 @@ var replaceSymbols = function(context) {
   var totalInstances = 0;
 
   // find any local symbols in the current document which are now provided by the library
-  var replacer = MSReplaceWithSymbolAction.alloc().init();
+
   var librarySymbols = library.document().documentData().localSymbols();
   for(var i = 0 ; i < librarySymbols.length ; ++i){
     var librarySymbol = librarySymbols[i];
@@ -73,7 +73,7 @@ var replaceSymbols = function(context) {
 
     // replace all local instances with the newly imported symbol
     for(var j = 0 ; j < obj.localInstances.length ; ++j){
-      replacer.replaceLayer_withSymbol_(obj.localInstances[j], importedSymbol.symbolMaster());
+      obj.localInstances[j].changeInstanceToSymbol(importedSymbol.symbolMaster());
     }
   }
 
