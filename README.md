@@ -7,7 +7,7 @@ Sketch 47 sees the introduction of Libraries, but migrating existing files to us
 
 ## Installation
 
-[Download zip](https://github.com/zeroheight/library-symbol-replacer/releases/download/1.0.1/library-symbol-replacer.sketchplugin.zip), unzip and double click the `.sketchplugin`
+[Download zip](https://github.com/zeroheight/library-symbol-replacer/releases/download/1.0.2/library-symbol-replacer.sketchplugin.zip), unzip and double click the `.sketchplugin`
 
 ## Usage
 ### Preparing Libraries
