@@ -40,7 +40,7 @@ var replaceSymbols = function(context) {
       if(instances.length > 0){
         totalInstances += instances.length;
         imports.push({
-          localSymbol:localSymbol,
+          localSymbol: localSymbol,
           librarySymbol: librarySymbol,
           localInstances: instances
         });
@@ -63,6 +63,7 @@ var replaceSymbols = function(context) {
     return;
   }
 
+  var idmap = {};
   for(var i = 0 ; i < imports.length ; ++i){
     var obj = imports[i];
 
@@ -70,10 +71,21 @@ var replaceSymbols = function(context) {
     var importedSymbol = librariesController().importForeignSymbol_fromLibrary_intoDocument_(
         obj.librarySymbol, library, documentData);
 
+    var localID = String(obj.localSymbol.symbolID());
+    var foreignID = String(importedSymbol.symbolMaster().symbolID());
+    idmap[localID] = foreignID;
+
     // replace all local instances with the newly imported symbol
     for(var j = 0 ; j < obj.localInstances.length ; ++j){
       obj.localInstances[j].changeInstanceToSymbol(importedSymbol.symbolMaster());
     }
+  }
+
+  // ensure there are no dangling overrides still pointing to local symbols
+  var allInstances = getAllInstances(context.document);
+  for(var i = 0 ; i < allInstances.length ; ++i){
+    log('updating instance ' + allInstances[i]);
+    MSLayerPaster.updateOverridesOnInstance_withIDMap_(allInstances[i], idmap);
   }
 
   var decision = yesNoDialog('Cool! All done.\n\nDo you want to delete the ' + 
@@ -87,6 +99,20 @@ var replaceSymbols = function(context) {
       obj.localSymbol.removeFromParent();
     }
   }
+}
+
+var getAllInstances = function(document){
+  var predicate = NSPredicate.predicateWithFormat("className == %@", "MSSymbolInstance");
+  var filteredArray = NSArray.array()
+  var loopPages = document.pages().objectEnumerator()
+  var page = null;
+  var scope = null;
+  while (page = loopPages.nextObject()) {
+    scope = page.children();
+    filteredArray = filteredArray.arrayByAddingObjectsFromArray(
+      scope.filteredArrayUsingPredicate(predicate))
+  }
+  return filteredArray;
 }
 
 var showAlert = function(message){
