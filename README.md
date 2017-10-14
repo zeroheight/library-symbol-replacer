@@ -11,15 +11,15 @@ Sketch 47 sees the introduction of Libraries, but migrating existing files to us
 
 ## Usage
 ### Preparing Libraries
-* copy-and-paste your symbols into a different Sketch document
-* make that document a Library ([see Sketch docs if you need help](https://www.sketchapp.com/docs/libraries/adding-libraries))
+* Copy-and-paste your symbols into a different Sketch document
+* Make that document a Library ([see Sketch docs if you need help](https://www.sketchapp.com/docs/libraries/adding-libraries))
 
 ### Using the plugin
-* open the document where you want to replace symbols with Library symbols
-* run the plugin
-* select the Library file using the "Choose" dialog
-* the plugin will tell you what replacements it thinks it can make
-* when the replacements are done, it will also ask you if you want to delete the symbols which have been replaced
+* Open a document where you want to replace symbols with Library symbols
+* Run the plugin
+* Select the Library file using the "Choose" dialog
+* The plugin will tell you what replacements it thinks it can make
+* When the replacements are done, it will also ask you if you want to delete the symbols which have been replaced
 
 ## Issues
 * It is currently quite dumb and just uses symbol names to match symbols - that's because symbol IDs can be different, depending on how you copy and paste thing around
