@@ -21,5 +21,10 @@ Sketch 47 sees the introduction of Libraries, but migrating existing files to us
 * the plugin will tell you what replacements it thinks it can make
 * when the replacements are done, it will also ask you if you want to delete the symbols which have been replaced
 
+## Issues
+* It is currently quite dumb and just uses symbol names to match symbols - that's because symbol IDs can be different, depending on how you copy and paste thing around
+* Hopefully the overrides should be fairly resilient, but there are a few Sketch bugs I came across while implementing this, so I had to work around those
+* It won't work for replacing Library symbols with other Library symbols - this could be a future improvement
+
 ## Help!
 Get in touch with me at robin#zeroheight.com, but use @ instead of # if you're not a 🤖
