@@ -22,7 +22,7 @@ N.B. the plugin currently uses symbol name to work out what to replace with what
 * If you're breaking up a big file, copy and paste some symbols into a different Sketch document
 * Make that document a Library ([see Sketch docs if you need help](https://www.sketchapp.com/docs/libraries/adding-libraries))
 * Repeat this into as many Libraries as you want
-* Copy and paste your artboards (the ones that use symbols) into other Sketch files, and use the plugin in those files to link to your Library symbols
+* In your original file, use the plugin to replace your document symbols with the new Library ones
 
 ## Issues
 * It is currently quite dumb and just uses symbol names to match symbols - that's because symbol IDs can be different, depending on how you copy and paste thing around
