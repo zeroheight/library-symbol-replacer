@@ -25,7 +25,7 @@ N.B. the plugin currently uses symbol name to work out what to replace with what
 * In your original file, use the plugin to replace your document symbols with the new Library ones
 
 ## Issues
-* It is currently quite dumb and just uses symbol names to match symbols - that's because symbol IDs can be different, depending on how you copy and paste thing around
+* It is currently quite dumb and just uses symbol **names** to match symbols - that's because symbol IDs can be different, depending on how you copy and paste thing around
 * Hopefully the overrides should be fairly resilient, but there are a few Sketch bugs I came across while implementing this, so I had to work around those
 * It won't work for replacing Library symbols with other Library symbols - this could be a future improvement
 
