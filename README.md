@@ -1,4 +1,4 @@
-<img src='./images/cover.png'>
+<img src='https://raw.githubusercontent.com/zeroheight/library-symbol-replacer/master/images/cover.png'>
 
 ## Overview
 Replace symbols in the current document with symbols from a Library.
