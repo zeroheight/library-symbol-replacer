@@ -6,6 +6,17 @@
     <description>replace symbols in an existing documents with library symbols</description>
     <language>en</language>
       <item>
+        <title>Version 1.0.7</title>
+        <description>
+          <![CDATA[
+            <ul>
+              <li>replace symbols even if they don't have instances</li>
+            </ul>
+          ]]>
+        </description>
+        <enclosure url="https://github.com/zeroheight/library-symbol-replacer/releases/download/v1.0.7/library-symbol-replacer.sketchplugin.zip" sparkle:version="1.0.7" />
+      </item>
+      <item>
         <title>Version 1.0.6</title>
         <description>
           <![CDATA[
