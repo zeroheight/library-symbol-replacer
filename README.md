@@ -6,8 +6,7 @@ Replace symbols in the current document with symbols from a Library.
 Sketch 47 sees the introduction of Libraries, but migrating existing files to use Library symbols is one of the first big headaches. This plugin aims to help with that.
 
 ## Installation
-
-[Download zip](https://github.com/zeroheight/library-symbol-replacer/releases/download/v1.0.6/library-symbol-replacer.sketchplugin.zip), unzip and double click the `.sketchplugin`
+[Download zip](https://github.com/zeroheight/library-symbol-replacer/releases/download/v1.0.7/library-symbol-replacer.sketchplugin.zip), unzip and double click the `.sketchplugin`
 
 ## Usage
 ### Preparing Libraries

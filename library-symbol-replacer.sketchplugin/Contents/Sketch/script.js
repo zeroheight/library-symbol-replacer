@@ -37,14 +37,12 @@ var replaceSymbols = function(context) {
     var localSymbol = localLookup[symbolName];
     if(localSymbol){
       var instances = localSymbol.allInstances();
-      if(instances.length > 0){
-        totalInstances += instances.length;
-        imports.push({
-          localSymbol: localSymbol,
-          librarySymbol: librarySymbol,
-          localInstances: instances
-        });
-      }
+      totalInstances += instances.length;
+      imports.push({
+        localSymbol: localSymbol,
+        librarySymbol: librarySymbol,
+        localInstances: instances
+      });
     }
   }
 
