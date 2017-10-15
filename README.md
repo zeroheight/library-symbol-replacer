@@ -8,7 +8,13 @@ Sketch 47 sees the introduction of Libraries, but migrating existing files to us
 N.B. the plugin currently uses symbol name to work out what to replace with what, so be careful of any conflicts.
 
 ## Installation
-[Download zip](https://github.com/zeroheight/library-symbol-replacer/releases/download/v1.0.7/library-symbol-replacer.sketchplugin.zip), unzip and double click the `.sketchplugin`
+**[Download](https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/download)**, unzip and double click the `.sketchplugin`
+
+or
+
+<a href="https://sketchpacks.com/zeroheight/library-symbol-replacer/install">
+	<img width="160" height="41" src="http://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png" >
+</a>
 
 ## Usage
 ### Using the plugin
