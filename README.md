@@ -9,16 +9,18 @@ Sketch 47 sees the introduction of Libraries, but migrating existing files to us
 [Download zip](https://github.com/zeroheight/library-symbol-replacer/releases/download/v1.0.7/library-symbol-replacer.sketchplugin.zip), unzip and double click the `.sketchplugin`
 
 ## Usage
-### Preparing Libraries
-* Copy-and-paste your symbols into a different Sketch document
-* Make that document a Library ([see Sketch docs if you need help](https://www.sketchapp.com/docs/libraries/adding-libraries))
-
 ### Using the plugin
 * Open a document where you want to replace symbols with Library symbols
-* Run the plugin
-* Select the Library file using the "Choose" dialog
+* Run the plugin from `Plugins > Library Symbol Replacer > Replace symbols from Library`
+* Select the Library file using the `Choose` dialog
 * The plugin will tell you what replacements it thinks it can make
 * When the replacements are done, it will also ask you if you want to delete the symbols which have been replaced
+
+### Breaking up a big file
+* If you're breaking up a big file, copy and paste some symbols into a different Sketch document
+* Make that document a Library ([see Sketch docs if you need help](https://www.sketchapp.com/docs/libraries/adding-libraries))
+* Repeat this into as many Libraries as you want
+* Copy and paste your artboards (the ones that use symbols) into other Sketch files, and use the plugin in those files to link to your Library symbols
 
 ## Issues
 * It is currently quite dumb and just uses symbol names to match symbols - that's because symbol IDs can be different, depending on how you copy and paste thing around
