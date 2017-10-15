@@ -1,5 +1,7 @@
 <img src='./images/cover.png'>
 
+[![Download from Sketchpacks.com](https://badges.sketchpacks.com/plugins/com.zeroheight.library-symbol-replacer/version.svg)](https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/download)
+
 ## Overview
 Replace symbols in the current document with symbols from a Library.
 
