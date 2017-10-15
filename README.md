@@ -26,5 +26,8 @@ Sketch 47 sees the introduction of Libraries, but migrating existing files to us
 * Hopefully the overrides should be fairly resilient, but there are a few Sketch bugs I came across while implementing this, so I had to work around those
 * It won't work for replacing Library symbols with other Library symbols - this could be a future improvement
 
-## Help!
-Get in touch with me at robin#zeroheight.com, but use @ instead of # if you're not a 🤖
+## Contact
+Get in touch at robin#zeroheight.com, but use @ instead of # if you're not a 🤖
+
+## License
+Copyright (c) 2017 Zero Height Limited (zeroheight). See LICENSE.md for further details.
