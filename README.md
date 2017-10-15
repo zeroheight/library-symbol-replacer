@@ -3,7 +3,7 @@
 ## Overview
 Replace symbols in the current document with symbols from a Library.
 
-Sketch 47 sees the introduction of Libraries, but migrating existing files to use Library symbols is one of the first big headaches. This plugin aims to help with that.
+Sketch 47 sees the introduction of Libraries, but migrating existing files to use Library symbols is one of the first big headaches. This plugin aims to help with that by allowing you to replace symbols in the current document with symbols from a Library document - maintaining overrides where possible.
 
 N.B. the plugin currently uses symbol name to work out what to replace with what, so be careful of any conflicts.
 
