@@ -19,7 +19,7 @@ or
 ## Usage
 ### Using the plugin
 * Open a document where you want to replace symbols with Library symbols
-* Run the plugin from `Plugins > Library Symbol Replacer > Replace symbols from Library`
+* Run the plugin from `Plugins > Library Symbol Replacer > Replace symbols from a new library`
 * Select the Library file using the `Choose` dialog
 * The plugin will tell you what replacements it thinks it can make
 * When the replacements are done, it will also ask you if you want to delete the symbols which have been replaced
