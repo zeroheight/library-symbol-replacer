@@ -1,7 +1,7 @@
 {
   "name": "Library Symbol Replacer",
   "identifier": "com.zeroheight.library-symbol-replacer",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "replace local symbols with library symbols",
   "authorEmail": "support@zeroheight.com",
   "author": "zeroheight team",
@@ -12,8 +12,14 @@
   "commands": [{
     "script": "script.js",
     "handler": "replaceSymbols",
-    "shortcut": "ctrl shift y",
-    "name": "Replace Symbols from Library",
+    "name": "Replace symbols from a new library",
     "identifier": "com.zeroheight.library-symbol-replacer.replace"
+  },
+  {
+    "script": "script.js",
+    "handler": "replaceFromLast",
+    "shortcut": "ctrl shift y",    
+    "name": "Replace symbols from the previous library",
+    "identifier": "com.zeroheight.library-symbol-replacer.replace-from-last"
   }]
 }

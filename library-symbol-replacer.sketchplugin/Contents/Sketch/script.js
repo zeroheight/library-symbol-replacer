@@ -1,3 +1,14 @@
+var replaceFromLast = function(context){
+  var userDefaults = this.getUserDefaults();
+  var urlString = userDefaults.objectForKey('url');
+  if(!urlString){
+    this.replaceSymbols(context);
+  }else{
+    var url = NSURL.URLWithString(urlString);
+    this.replaceFromUrl(context, url);
+  }
+}
+
 var replaceSymbols = function(context) {
   var decision = yesNoDialog('Select the Library file you want to replace symbols from',
     'Choose','Cancel');
@@ -11,6 +22,15 @@ var replaceSymbols = function(context) {
     return;
   }
 
+  var userDefaults = this.getUserDefaults();
+
+  userDefaults.setObject_forKey(String(url),"url");
+  userDefaults.synchronize();
+
+  this.replaceFromUrl(context,url);
+}
+
+var replaceFromUrl = function(context,url){
   var library = findLibraryByUrl(url);
   if(!library){
     showAlert('Sorry, that file is not a Library. Add it as a Library and try again');
@@ -82,7 +102,6 @@ var replaceSymbols = function(context) {
   // ensure there are no dangling overrides still pointing to local symbols
   var allInstances = getAllInstances(context.document);
   for(var i = 0 ; i < allInstances.length ; ++i){
-    log('updating instance ' + allInstances[i]);
     MSLayerPaster.updateOverridesOnInstance_withIDMap_(allInstances[i], idmap);
   }
 
@@ -97,6 +116,10 @@ var replaceSymbols = function(context) {
       obj.localSymbol.removeFromParent();
     }
   }
+}
+
+var getUserDefaults = function(){
+  return NSUserDefaults.alloc().initWithSuiteName("com.zeroheight.library-symbol-replacer");
 }
 
 var getAllInstances = function(document){
