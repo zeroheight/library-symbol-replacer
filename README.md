@@ -38,7 +38,7 @@ To remedy that you can either:
 * Run the replacer plugin within your Components library first, to replace all icon symbols by icons from the Icons library. You should make sure that Components doesn't contain any other symbols than the component ones. Then you can run the plugin within your original file.
 * or, run the replacer plugin in your original file after transferring out the icons, but before transferring out the components themselves. That way the components will already be linked with the Icons Library's icons, instead of the local ones. If you have circular dependencies between your libraries, this approach might not be feasible.
 
-Overrides should be preserved with either method. Thanks to @drasnop for pointing this out
+Overrides should be preserved with either method. Thanks to [@drasnop](https://github.com/drasnop) for pointing this out
 
 ## Issues
 * It is currently quite dumb and just uses symbol **names** to match symbols - that's because symbol IDs can be different, depending on how you copy and paste thing around
