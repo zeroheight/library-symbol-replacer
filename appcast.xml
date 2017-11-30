@@ -1,42 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
   <channel>
     <title>Library Symbol Replacer</title>
-    <link>http://sparkle-project.org/files/sparkletestcast.xml</link>
-    <description>replace symbols in an existing documents with library symbols</description>
+    <link>https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/appcast</link>
+    <description>replace local symbols with library symbols</description>
     <language>en</language>
-      <item>
-        <title>Version 1.0.8</title>
-        <description>
-          <![CDATA[
-            <ul>
-              <li>update sketch compat version</li>
-            </ul>
-          ]]>
-        </description>
-        <enclosure url="https://github.com/zeroheight/library-symbol-replacer/releases/download/v1.0.8/library-symbol-replacer.sketchplugin.zip" sparkle:version="1.0.8" />
-      </item>
-      <item>
-        <title>Version 1.0.7</title>
-        <description>
-          <![CDATA[
-            <ul>
-              <li>replace symbols even if they don't have instances</li>
-            </ul>
-          ]]>
-        </description>
-        <enclosure url="https://github.com/zeroheight/library-symbol-replacer/releases/download/v1.0.7/library-symbol-replacer.sketchplugin.zip" sparkle:version="1.0.7" />
-      </item>
-      <item>
-        <title>Version 1.0.6</title>
-        <description>
-          <![CDATA[
-            <ul>
-              <li>initial release v1.0.6</li>
-            </ul>
-          ]]>
-        </description>
-        <enclosure url="https://github.com/zeroheight/library-symbol-replacer/releases/download/v1.0.6/library-symbol-replacer.sketchplugin.zip" sparkle:version="1.0.6" />
-      </item>
+    <item>
+      <title>1.0.14</title>
+      <description/>
+      <pubDate>2017-11-30 14:57:45 UTC</pubDate>
+      <enclosure url="https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/download/update/0.0.0?range==1.0.14" sparkle:version="1.0.14"/>
+    </item>
+    <item>
+      <title>1.0.13</title>
+      <description/>
+      <pubDate>2017-11-30 12:08:41 UTC</pubDate>
+      <enclosure url="https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/download/update/0.0.0?range==1.0.13" sparkle:version="1.0.13"/>
+    </item>
+    <item>
+      <title>1.0.12</title>
+      <description/>
+      <pubDate>2017-11-30 12:06:31 UTC</pubDate>
+      <enclosure url="https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/download/update/0.0.0?range==1.0.12" sparkle:version="1.0.12"/>
+    </item>
+    <item>
+      <title>1.0.11</title>
+      <description>remember previous library</description>
+      <pubDate>2017-10-27 16:25:02 UTC</pubDate>
+      <enclosure url="https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/download/update/0.0.0?range==1.0.11" sparkle:version="1.0.11"/>
+    </item>
+    <item>
+      <title>1.0.10</title>
+      <description>updating manifest with correct version</description>
+      <pubDate>2017-10-15 23:49:17 UTC</pubDate>
+      <enclosure url="https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/download/update/0.0.0?range==1.0.10" sparkle:version="1.0.10"/>
+    </item>
+    <item>
+      <title>1.0.9</title>
+      <description>removing v from version tag</description>
+      <pubDate>2017-10-15 23:22:09 UTC</pubDate>
+      <enclosure url="https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/download/update/0.0.0?range==1.0.9" sparkle:version="1.0.9"/>
+    </item>
+    <item>
+      <title>1.0.8</title>
+      <description>update sketch compat and use sketchpacks appcast</description>
+      <pubDate>2017-10-15 23:14:58 UTC</pubDate>
+      <enclosure url="https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/download/update/0.0.0?range==1.0.8" sparkle:version="1.0.8"/>
+    </item>
+    <item>
+      <title>1.0.7</title>
+      <description/>
+      <pubDate>2017-10-15 17:17:22 UTC</pubDate>
+      <enclosure url="https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/download/update/0.0.0?range==1.0.7" sparkle:version="1.0.7"/>
+    </item>
+    <item>
+      <title>1.0.6</title>
+      <description/>
+      <pubDate>2017-10-15 17:04:08 UTC</pubDate>
+      <enclosure url="https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/download/update/0.0.0?range==1.0.6" sparkle:version="1.0.6"/>
+    </item>
+    <item>
+      <title>1.0.5</title>
+      <description/>
+      <pubDate>2017-10-15 15:19:35 UTC</pubDate>
+      <enclosure url="https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/download/update/0.0.0?range==1.0.5" sparkle:version="1.0.5"/>
+    </item>
+    <item>
+      <title>1.0.4</title>
+      <description/>
+      <pubDate>2017-10-14 00:30:25 UTC</pubDate>
+      <enclosure url="https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/download/update/0.0.0?range==1.0.4" sparkle:version="1.0.4"/>
+    </item>
+    <item>
+      <title>1.0.3</title>
+      <description/>
+      <pubDate>2017-10-13 18:45:35 UTC</pubDate>
+      <enclosure url="https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/download/update/0.0.0?range==1.0.3" sparkle:version="1.0.3"/>
+    </item>
+    <item>
+      <title>1.0.2</title>
+      <description/>
+      <pubDate>2017-10-13 17:54:55 UTC</pubDate>
+      <enclosure url="https://api.sketchpacks.com/v1/plugins/com.zeroheight.library-symbol-replacer/download/update/0.0.0?range==1.0.2" sparkle:version="1.0.2"/>
+    </item>
   </channel>
 </rss>
