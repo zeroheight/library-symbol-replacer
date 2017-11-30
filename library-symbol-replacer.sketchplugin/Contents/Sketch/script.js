@@ -81,6 +81,7 @@ var replaceFromUrl = function(context,url){
     return;
   }
 
+  // first pass imports foreign symbols and builds the idmap
   var idmap = {};
   for(var i = 0 ; i < imports.length ; ++i){
     var obj = imports[i];
@@ -92,17 +93,29 @@ var replaceFromUrl = function(context,url){
     var localID = String(obj.localSymbol.symbolID());
     var foreignID = String(importedSymbol.symbolMaster().symbolID());
     idmap[localID] = foreignID;
+  }
 
-    // replace all local instances with the newly imported symbol
+  for(var i = 0 ; i < imports.length ; ++i){
+    var obj = imports[i];
+    // replace all local instances with the newly imported symbol, taking care to update
+    // the overrides first
     for(var j = 0 ; j < obj.localInstances.length ; ++j){
-      obj.localInstances[j].changeInstanceToSymbol(importedSymbol.symbolMaster());
+      if(!MSLayerPaster.updateOverridesOnInstance_withIDMap_){
+        obj.localInstances[j].updateOverridesWithObjectIDMap(idmap);
+      }else{
+        MSLayerPaster.updateOverridesOnInstance_withIDMap_(obj.localInstances[j], idmap);
+      }
     }
   }
 
-  // ensure there are no dangling overrides still pointing to local symbols
+  // finally, ensure there are no dangling overrides in instances we haven't replaced
   var allInstances = getAllInstances(context.document);
   for(var i = 0 ; i < allInstances.length ; ++i){
-    MSLayerPaster.updateOverridesOnInstance_withIDMap_(allInstances[i], idmap);
+      if(!MSLayerPaster.updateOverridesOnInstance_withIDMap_){
+        allInstances[i].updateOverridesWithObjectIDMap(idmap);
+      }else{
+        MSLayerPaster.updateOverridesOnInstance_withIDMap_(allInstances[i], idmap);
+      }
   }
 
   var decision = yesNoDialog('Cool! All done.\n\nDo you want to delete the ' + 
