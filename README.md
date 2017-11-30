@@ -30,6 +30,16 @@ or
 * Repeat this into as many Libraries as you want
 * In your original file, use the plugin to replace your document symbols with the new Library ones
 
+### Multiple files
+If you have nested symbols that you want to send to different libraries (e.g. components that contain icons, and you want a separate Components and Icons library) - when you copy your components symbols out of your original file, you'll bring with them the icon symbols that they contain, which would create duplicates (the same icon would become two symbols, one in Components and one in Icons).
+
+To remedy that you can either:
+
+* Run the replacer plugin within your Components library first, to replace all icon symbols by icons from the Icons library. You should make sure that Components doesn't contain any other symbols than the component ones. Then you can run the plugin within your original file.
+* or, run the replacer plugin in your original file after transferring out the icons, but before transferring out the components themselves. That way the components will already be linked with the Icons Library's icons, instead of the local ones. If you have circular dependencies between your libraries, this approach might not be feasible.
+
+Overrides should be preserved with either method.
+
 ## Issues
 * It is currently quite dumb and just uses symbol **names** to match symbols - that's because symbol IDs can be different, depending on how you copy and paste thing around
 * Hopefully the overrides should be fairly resilient, but there are a few Sketch bugs I came across while implementing this, so I had to work around those
