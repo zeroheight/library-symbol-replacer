@@ -90,8 +90,10 @@ var replaceFromUrl = function(context,url){
     var importedSymbol = librariesController().importForeignSymbol_fromLibrary_intoDocument_(
         obj.librarySymbol, library, documentData);
 
+    obj.importedSymbol = importedSymbol.symbolMaster();
+
     var localID = String(obj.localSymbol.symbolID());
-    var foreignID = String(importedSymbol.symbolMaster().symbolID());
+    var foreignID = String(obj.importedSymbol.symbolID());
     idmap[localID] = foreignID;
   }
 
@@ -105,6 +107,8 @@ var replaceFromUrl = function(context,url){
       }else{
         MSLayerPaster.updateOverridesOnInstance_withIDMap_(obj.localInstances[j], idmap);
       }
+
+      obj.localInstances[j].changeInstanceToSymbol(obj.importedSymbol);
     }
   }
 
