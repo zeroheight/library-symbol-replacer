@@ -100,15 +100,15 @@ var replaceFromUrl = function(context,url){
   for(var i = 0 ; i < imports.length ; ++i){
     var obj = imports[i];
     // replace all local instances with the newly imported symbol, taking care to update
-    // the overrides first
+    // the overrides
     for(var j = 0 ; j < obj.localInstances.length ; ++j){
+      obj.localInstances[j].changeInstanceToSymbol(obj.importedSymbol);
+
       if(!MSLayerPaster.updateOverridesOnInstance_withIDMap_){
         obj.localInstances[j].updateOverridesWithObjectIDMap(idmap);
       }else{
         MSLayerPaster.updateOverridesOnInstance_withIDMap_(obj.localInstances[j], idmap);
       }
-
-      obj.localInstances[j].changeInstanceToSymbol(obj.importedSymbol);
     }
   }
 
