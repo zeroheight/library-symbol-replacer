@@ -87,8 +87,19 @@ var replaceFromUrl = function(context,url){
     var obj = imports[i];
 
     // import the symbol into the document
-    var importedSymbol = librariesController().importForeignSymbol_fromLibrary_intoDocument_(
-        obj.librarySymbol, library, documentData);
+    var importedSymbol = null;
+
+    if (MSApplicationMetadata.metadata().appVersion >= 50) {
+      var shareableObjectReference = MSShareableObjectReference
+        .referenceForShareableObject_inLibrary(obj.librarySymbol, library);
+      importedSymbol = AppController.sharedInstance().librariesController()
+        .importShareableObjectReference_intoDocument(
+          shareableObjectReference, documentData);
+    } else {
+      importedSymbol = AppController.sharedInstance().librariesController()
+        .importForeignSymbol_fromLibrary_intoDocument_(
+          symbol, library, documentData);
+    }
 
     obj.importedSymbol = importedSymbol.symbolMaster();
 
